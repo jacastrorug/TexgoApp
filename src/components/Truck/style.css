@@ -1,0 +1,44 @@
+.track h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.wpo-track-section {
+  padding: 60px 0 70px;
+  background: url("../../images/news/bg.jpg") no-repeat center center / cover;
+}
+
+.wpo-track-section .track form {
+  position: relative;
+}
+.wpo-track-section .track button {
+  background: #e53935;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 200px;
+  height: 50px;
+  transition: all 0.3s;
+}
+.wpo-track-section .track button:hover {
+  background: #474747;
+}
+.wpo-track-section .track input {
+  background: #fff;
+  height: 50px;
+  font-size: 17px;
+  color: #333;
+  padding: 6px 80px 6px 30px;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-control {
+  border-radius: 0px;
+}

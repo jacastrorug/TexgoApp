@@ -1,0 +1,35 @@
+.wpo-about-style-2 {
+  background: url("../../images/about/2.jpg") no-repeat center top / cover;
+}
+
+.wpo-about-style-2 .about-wrap {
+  background: rgba(20, 36, 64, 0.8);
+  padding: 50px;
+  float: left;
+}
+.wpo-about-style-2 .content {
+  padding: 50px;
+}
+.wpo-about-style-2 .wpo-about-content h2,
+.wpo-about-style-3 .wpo-about-content h2 {
+  color: #fff;
+}
+.wpo-about-style-2 .wpo-about-content p,
+.wpo-about-style-3 .wpo-about-content p {
+  color: #fff;
+}
+.wpo-about-style-2 .wpo-about-content span,
+.wpo-about-style-3 .wpo-about-content span {
+  color: #fff;
+}
+.wpo-about-style-2 .si-text p,
+.wpo-about-style-3 .si-text p {
+  color: #fff;
+}
+.wpo-about-style-2 .si-text span,
+.wpo-about-style-3 .si-text span {
+  color: #fff;
+}
+.wpo-section-item-2 {
+  padding: 25px 0 50px;
+}
