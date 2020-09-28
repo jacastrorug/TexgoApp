@@ -1,4 +1,4 @@
-	/*
+/*
   	Flaticon icon font: Flaticon
   	Creation date: 16/10/2018 15:01
   	*/
@@ -7,37 +7,143 @@
   font-family: "Flaticon";
   src: url("../fonts/Flaticon.eot");
   src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
-       url("../fonts/Flaticon.woff") format("woff"),
-       url("../fonts/Flaticon.ttf") format("truetype"),
-       url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    url("../fonts/Flaticon.woff") format("woff"),
+    url("../fonts/Flaticon.ttf") format("truetype"),
+    url("../fonts/Flaticon.svg#Flaticon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
   @font-face {
     font-family: "Flaticon";
     src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
   }
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
   font-family: Flaticon;
-        font-size: 40px;
-        font-style: normal;
+  font-size: 40px;
+  font-style: normal;
 }
 
-.flaticon-plane:before { content: "\f100";}
-.flaticon-ship:before { content: "\f101"; }
-.flaticon-truck:before { content: "\f102"; }
-.flaticon-delivery:before { content: "\f103"; }
-.flaticon-travel:before { content: "\f104"; }
-.flaticon-truck-1:before { content: "\f105"; }
-.flaticon-truck-2:before { content: "\f106"; }
-.flaticon-ship-1:before { content: "\f107"; }
-.flaticon-construction-tool-vehicle-with-crane-lifting-materials:before { content: "\f108"; }
-.flaticon-construction:before { content: "\f108"; }
-.flaticon-giftbox:before { content: "\f109"; }
-.flaticon-box:before { content: "\f10a"; }
-.flaticon-trolley:before { content: "\f10b"; }
+.flaticon-plane:before {
+  content: "\f100";
+}
+.flaticon-ship:before {
+  content: "\f101";
+}
+.flaticon-truck:before {
+  content: "\f102";
+}
+.flaticon-delivery:before {
+  content: "\f103";
+}
+.flaticon-travel:before {
+  content: "\f104";
+}
+.flaticon-truck-1:before {
+  content: "\f105";
+}
+.flaticon-truck-2:before {
+  content: "\f106";
+}
+.flaticon-ship-1:before {
+  content: "\f107";
+}
+.flaticon-construction-tool-vehicle-with-crane-lifting-materials:before {
+  content: "\f108";
+}
+.flaticon-construction:before {
+  content: "\f108";
+}
+.flaticon-giftbox:before {
+  content: "\f109";
+}
+.flaticon-box:before {
+  content: "\f10a";
+}
+.flaticon-trolley:before {
+  content: "\f10b";
+}
+
+@font-face {
+  font-family: "Flaticon2";
+  src: url("../fonts/news/Flaticon.eot");
+  src: url("../fonts/news/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/news/Flaticon.woff2") format("woff2"),
+    url("../fonts/news/Flaticon.woff") format("woff"),
+    url("../fonts/news/Flaticon.ttf") format("truetype"),
+    url("../fonts/news/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family: "Flatico2";
+    src: url("../fonts/news/Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon2-"]:before,
+[class*=" flaticon2-"]:before,
+[class^="flaticon2-"]:after,
+[class*=" flaticon2-"]:after {
+  font-family: Flaticon2;
+  font-size: 40px;
+  font-style: normal;
+}
+
+.flaticon2-camion:before {
+  content: "\f100";
+}
+.flaticon2-camion-de-reparto:before {
+  content: "\f101";
+}
+.flaticon2-camion-1:before {
+  content: "\f102";
+}
+.flaticon2-camion-de-reparto-1:before {
+  content: "\f103";
+}
+.flaticon2-carga:before {
+  content: "\f104";
+}
+.flaticon2-camion-2:before {
+  content: "\f105";
+}
+.flaticon2-envase:before {
+  content: "\f106";
+}
+.flaticon2-envase-1:before {
+  content: "\f107";
+}
+.flaticon2-envase-2:before {
+  content: "\f108";
+}
+.flaticon2-remolque:before {
+  content: "\f109";
+}
+.flaticon2-remolque-1:before {
+  content: "\f10a";
+}
+.flaticon2-furgoneta:before {
+  content: "\f10b";
+}
+.flaticon2-camioneta:before {
+  content: "\f10c";
+}
+
+.flaticon2-temperaturas-bajas:before {
+  content: "\f10d";
+}
+.flaticon2-copo-de-nieve:before {
+  content: "\f10e";
+}
+.flaticon2-copo-de-nieve-1:before {
+  content: "\f10f";
+}

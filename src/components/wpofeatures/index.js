@@ -1,5 +1,5 @@
 import React from "react";
-import feimg from "../../images/features/1.png";
+import feimg from "../../images/features/3.png";
 import "./style.css";
 
 const WpoFeatures = () => {
@@ -19,11 +19,7 @@ const WpoFeatures = () => {
                     <i className="fi flaticon-plane"></i>
                   </div>
                   <div className="wpo-features-text">
-                    <h3>First Air Freight</h3>
-                    <p>
-                      Many desktop publishing packages and web page editors now
-                      use Lorem Ipsum as their default model text,
-                    </p>
+                    <h3>Attention to Detail</h3>
                   </div>
                 </div>
               </div>
@@ -33,11 +29,7 @@ const WpoFeatures = () => {
                     <i className="fi flaticon-truck"></i>
                   </div>
                   <div className="wpo-features-text">
-                    <h3>First Ground Shipping</h3>
-                    <p>
-                      Many desktop publishing packages and web page editors now
-                      use Lorem Ipsum as their default model text,
-                    </p>
+                    <h3>Dispatch Services for Owner OPS</h3>
                   </div>
                 </div>
               </div>
@@ -58,11 +50,7 @@ const WpoFeatures = () => {
                     <i className="fi flaticon-ship"></i>
                   </div>
                   <div className="wpo-features-text">
-                    <h3>Quickest Cargo</h3>
-                    <p>
-                      Many desktop publishing packages and web page editors now
-                      use Lorem Ipsum as their default model text,
-                    </p>
+                    <h3>Single Point Contact</h3>
                   </div>
                 </div>
               </div>
@@ -72,11 +60,7 @@ const WpoFeatures = () => {
                     <i className="fi flaticon-truck-1"></i>
                   </div>
                   <div className="wpo-features-text">
-                    <h3>Timely Delivery</h3>
-                    <p>
-                      Many desktop publishing packages and web page editors now
-                      use Lorem Ipsum as their default model text,
-                    </p>
+                    <h3>24/7 Availability</h3>
                   </div>
                 </div>
               </div>

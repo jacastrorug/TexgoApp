@@ -11,7 +11,7 @@ const Newsletter = (props) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-4">
-            <h2>Subscribe Our newsletter</h2>
+            <h2>Subscribe to Our Industry</h2>
             <p>
               Contrary to popular belief, Lorem Ipsum is not simply random text.
             </p>

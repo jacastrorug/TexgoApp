@@ -28,16 +28,6 @@ const FooterSection = () => {
                 <ul className="d-flex">
                   <li>
                     <Link to="/">
-                      <i className="fa fa-facebook" aria-hidden="true"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/">
-                      <i className="fa fa-twitter" aria-hidden="true"></i>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/">
                       <i className="fa fa-linkedin" aria-hidden="true"></i>
                     </Link>
                   </li>

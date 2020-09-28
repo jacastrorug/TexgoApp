@@ -29,12 +29,13 @@ class SimpleSlider extends Component {
                 <div className="row">
                   <div className="col col-lg-9 slide-caption">
                     <h2>
-                      <span>We Provide the Best Solution</span>{" "}
-                      <span>For Your Transport.</span>
+                      <span>We take</span>
+                      <br />
+                      <span>Freight Personally.</span>
                     </h2>
                     <div className="btns">
                       <div className="btn-style">
-                        <Link to="/">Contact us now</Link>
+                        <Link to="/quote-road-service">Request Quote</Link>
                       </div>
                     </div>
                   </div>
@@ -46,12 +47,13 @@ class SimpleSlider extends Component {
                 <div className="row">
                   <div className="col col-lg-9 slide-caption">
                     <h2>
-                      <span>We Provide the Best Solution</span>{" "}
-                      <span>For Your Transport.</span>
+                      <span>We take</span>
+                      <br />
+                      <span>Freight Personally.</span>
                     </h2>
                     <div className="btns">
                       <div className="btn-style">
-                        <Link to="/">Contact us now</Link>
+                        <Link to="/quote-road-service">Request Quote</Link>
                       </div>
                     </div>
                   </div>
@@ -63,12 +65,13 @@ class SimpleSlider extends Component {
                 <div className="row">
                   <div className="col col-lg-9 slide-caption">
                     <h2>
-                      <span>We Provide the Best Solution</span>
-                      <span>For Your Transport.</span>
+                      <span>We take</span>
+                      <br />
+                      <span>Freight Personally.</span>
                     </h2>
                     <div className="btns">
                       <div className="btn-style">
-                        <Link to="/">Contact us now</Link>
+                        <Link to="/quote-road-service">Request Quote</Link>
                       </div>
                     </div>
                   </div>

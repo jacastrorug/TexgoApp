@@ -16,13 +16,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <SimpleSlider />
-    <Features />
     <AboutSection />
     <ServiceArea />
     <WpoFeatures />
     <TruckArea />
-    <PricingSection />
-    <BlogSection />
     <Newsletter />
   </Layout>
 );

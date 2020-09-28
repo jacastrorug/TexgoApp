@@ -14,28 +14,6 @@ const Header = () => {
 
   return (
     <header>
-      <div className="header-top-1">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-9 col-sm-12 col-12">
-              <ul className="d-flex account_login-area">
-                <li>
-                  <i className="fa fa-clock-o" aria-hidden="true"></i>Mon - Tues
-                  : 6.00 am - 10.00 pm
-                </li>
-                <li>
-                  <i className="fa fa-map-marker"></i>150 Houston, Texas, USA
-                </li>
-              </ul>
-            </div>
-            <div className="col-lg-3 col-md-3 col-sm-12">
-              <div className="btn-style">
-                <Link to="/contact">Contact Us</Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="header-style-1">
         <div className="container">
           <div className="row">
@@ -68,7 +46,10 @@ const Header = () => {
                       </ul>
                     </li>
                     <li>
-                      <Link to="/blog">Blog</Link>
+                      <Link to="/carriers">Carriers</Link>
+                    </li>
+                    <li>
+                      <Link to="/customers">Customers</Link>
                     </li>
                     <li>
                       <Link to="/contact">Contact</Link>

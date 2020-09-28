@@ -27,13 +27,6 @@ const AboutSection2 = () => {
               <span>We making it look like readable English.</span>
               <span>Long established fact that a reader</span>
             </div>
-            <div className="signature-section">
-              <div className="si-text">
-                <p>Ketty Raigott</p>
-                <span>Chairman & Chief Executive Officer</span>
-              </div>
-              <img src={abimg2} alt="" />
-            </div>
           </div>
         </div>
       </div>

@@ -95,7 +95,7 @@ class CuoteForm extends Component {
           <div className="row">
             <div className="col-lg-12 col-md-12">
               <div className="contact-area contact-area-2 contact-area-3">
-                <h2>FULL TRUCKLOAD QUOTE</h2>
+                <h2>QUOTE FORM</h2>
                 <form onSubmit={this.subimtHandler}>
                   <div className="contact-form form-style row">
                     <div className="col-12 col-lg-6">

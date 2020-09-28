@@ -34,8 +34,8 @@
   flex-direction: column;
 }
 .slide1 {
-  background: url("../../images/slider/1.jpg") center center/cover no-repeat
-    local;
+  background: url("../../images/slider/usa-map.jpg") center center/cover
+    no-repeat local;
 }
 .slide2 {
   background: url("../../images/slider/4.jpg") center center/cover no-repeat
