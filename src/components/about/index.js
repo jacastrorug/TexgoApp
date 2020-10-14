@@ -1,6 +1,5 @@
 import React from "react";
 
-import abimg2 from "../../images/about/2.png";
 import abimg3 from "../../images/about/3.jpg";
 
 import "./style.css";
@@ -26,13 +25,7 @@ const AboutSection = () => {
               <span>We making it look like readable English.</span>
               <span>Long established fact that a reader</span>
             </div>
-            <div className="signature-section">
-              <div className="si-text">
-                <p>Ketty Raigott</p>
-                <span>Chairman & Chief Executive Officer</span>
-              </div>
-              <img src={abimg2} alt="" />
-            </div>
+            <div className="signature-section"></div>
           </div>
           <div className="col-lg-6 about-ss">
             <div className="about-title">
