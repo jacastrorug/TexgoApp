@@ -18,8 +18,8 @@ const ServiceArea3 = () => {
                 <i className="fi flaticon2-copo-de-nieve-1"></i>
               </div>
               <div className="service-text">
-                <h3>Reefer Freight</h3>
-                <p>Perishable or just temp controlled it's our specialty</p>
+                <h3>Truckload Freight</h3>
+                <p>whether dry goods or temp controlled it’s our specialty</p>
               </div>
             </div>
           </div>
@@ -41,7 +41,7 @@ const ServiceArea3 = () => {
               </div>
               <div className="service-text">
                 <h3>LTL</h3>
-                <p>From 1 box to a few boxs we have a solution</p>
+                <p>From 1 box to a few Pallets, We have a solution</p>
               </div>
             </div>
           </div>
@@ -73,8 +73,8 @@ const ServiceArea3 = () => {
                 <i className="fi flaticon2-camioneta"></i>
               </div>
               <div className="service-text">
-                <h3>Dry Van</h3>
-                <p>From packaged goods to pet food and everything in between</p>
+                <h3>Dispatch Services</h3>
+                <p>Matching the best loads to the driver’s needs</p>
               </div>
             </div>
           </div>

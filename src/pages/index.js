@@ -20,7 +20,6 @@ const IndexPage = () => (
     <ServiceArea />
     <WpoFeatures />
     <TruckArea />
-    <Newsletter />
   </Layout>
 );
 

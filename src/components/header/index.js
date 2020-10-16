@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 
 import MobileMenu from "../../components/MobileMenu";
-import logo from "../../images/logo/logo.png";
+import logo from "../../images/logo/logo-1.png";
 
 import "./style.css";
 

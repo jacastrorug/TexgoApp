@@ -29,7 +29,7 @@ const WpoFeatures = () => {
                     <i className="fi flaticon-truck"></i>
                   </div>
                   <div className="wpo-features-text">
-                    <h3>Dispatch Services for Owner OPS</h3>
+                    <h3>$100,000 bond</h3>
                   </div>
                 </div>
               </div>

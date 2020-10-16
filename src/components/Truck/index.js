@@ -13,7 +13,7 @@ const TruckArea = (props) => {
         <div className="row">
           <div className="col-lg-9">
             <div className="track">
-              <h3>Enter Your Email and Track Your Cargo</h3>
+              <h3>Subscribe to Our Industry</h3>
               <div className="wpo-tracking-form">
                 <form onSubmit={submitHandler}>
                   <div className="row">
@@ -22,21 +22,21 @@ const TruckArea = (props) => {
                         <input
                           type="text"
                           className="form-control"
-                          placeholder="Email"
+                          placeholder="Name"
                         />
                       </div>
                     </div>
                     <div className="col-lg-4 col-md-4 col-sm-6">
                       <div className="form-group">
                         <input
-                          type="text"
+                          type="email"
                           className="form-control"
-                          placeholder="Tracking Number"
+                          placeholder="Email"
                         />
                       </div>
                     </div>
                     <div className="col-lg-3 col-md-4 col-sm-6">
-                      <button type="submit">Track Your Cargo</button>
+                      <button type="submit">Subscribe</button>
                     </div>
                   </div>
                 </form>

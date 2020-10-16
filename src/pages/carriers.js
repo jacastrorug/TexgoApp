@@ -8,7 +8,7 @@ const CarriersPage = () => {
   return (
     <Layout>
       <SEO title="Carriers" />
-      <Breadcumb bdtitle={"Our Carriers"} bdsub={"Carriers"} />
+      <Breadcumb bdtitle={"Carriers"} bdsub={"Carriers"} />
     </Layout>
   );
 };
