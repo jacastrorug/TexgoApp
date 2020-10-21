@@ -15,11 +15,20 @@ const AboutSection2 = () => {
               </div>
               <h2>Who We Are?</h2>
               <p>
-              TexGo Transport is a company that is small enough to care but backed by big business! We are an agent office of Freight-tec. We offer solutions for client in multiple modes of transport. Whether Dry Goods or Temp Controlled, Heavy Machinery or simple building materials. We can handle your shipment needs across the U.S. and Canada with competitive options from China as well. We also started with the Backbone of Truckers in mind so we also offer dispatch services for Owner OP. With decades of experience we are certain to find the right solution for you!
+              TexGo Transport is a company that is small enough to care but backed
+              by big business! We are an agent office of Freight-tec. We offer solutions
+              for client in multiple modes of transport. Whether Dry Goods or Temp Controlled,
+              Heavy Machinery or simple building materials. 
+              </p>
+              <p>
+              We can handle your shipment needs 
+              across the U.S. and Canada with competitive options from China as well. 
+              We also started with the Backbone of Truckers in mind so we also offer dispatch 
+              services for Owner OP. With decades of experience we are certain to find the right 
+              solution for you!
               </p>
               <span>Long established fact that a reader</span>
               <span>We making it look like readable English.</span>
-              <span>Long established fact that a reader</span>
             </div>
           </div>
         </div>

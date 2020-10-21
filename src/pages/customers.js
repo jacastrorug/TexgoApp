@@ -8,7 +8,7 @@ const CustomerPage = () => {
   return (
     <Layout>
       <SEO title="Customer" />
-      <Breadcumb bdtitle={"Our Customers"} bdsub={"Customer"} />
+      <Breadcumb bdtitle={"Customers"} bdsub={"Customer"} />
     </Layout>
   );
 };

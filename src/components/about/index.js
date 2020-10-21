@@ -13,17 +13,20 @@ const AboutSection = () => {
             <div className="wpo-about-content">
               <h2>Who We Are?</h2>
               <p>
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
+              TexGo Transport is a company that is small enough to care but backed
+              by big business! We are an agent office of Freight-tec. We offer solutions
+              for client in multiple modes of transport. Whether Dry Goods or Temp Controlled,
+              Heavy Machinery or simple building materials. 
               </p>
               <p>
-                content here', making it look like readable English. Many
-                desktop publishing packages and web page
+              We can handle your shipment needs 
+              across the U.S. and Canada with competitive options from China as well. 
+              We also started with the Backbone of Truckers in mind so we also offer dispatch 
+              services for Owner OP. With decades of experience we are certain to find the right 
+              solution for you!
               </p>
               <span>Long established fact that a reader</span>
               <span>We making it look like readable English.</span>
-              <span>Long established fact that a reader</span>
             </div>
             <div className="signature-section"></div>
           </div>

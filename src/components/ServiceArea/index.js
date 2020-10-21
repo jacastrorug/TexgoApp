@@ -19,7 +19,7 @@ const ServiceArea3 = () => {
               </div>
               <div className="service-text">
                 <h3>Truckload Freight</h3>
-                <p>whether dry goods or temp controlled it’s our specialty</p>
+                <p>Whether dry goods or temp controlled it’s our specialty</p>
               </div>
             </div>
           </div>
