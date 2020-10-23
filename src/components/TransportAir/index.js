@@ -11,7 +11,7 @@ const TransportAir = (props) => {
             <div className="row">
               <div className="col-lg-12 col-md-6">
                 <div className="contact-us-area">
-                  <h3>Contuct Us</h3>
+                  <h3>Contact Us</h3>
                   <div className="contact-s">
                     <span>
                       <i className="fa fa-phone" aria-hidden="true"></i>Call Us

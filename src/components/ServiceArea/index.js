@@ -12,7 +12,7 @@ const ServiceArea3 = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-icon">
                 <i className="fi flaticon2-copo-de-nieve-1"></i>
@@ -23,7 +23,7 @@ const ServiceArea3 = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-icon">
                 <i className="fi flaticon-ship-1"></i>
@@ -34,7 +34,7 @@ const ServiceArea3 = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-icon">
                 <i className="fi flaticon-box"></i>
@@ -45,7 +45,7 @@ const ServiceArea3 = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="500" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-icon">
                 <i className="fi flaticon2-remolque"></i>
@@ -56,7 +56,7 @@ const ServiceArea3 = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="600" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-icon">
                 <i className="fi flaticon2-carga"></i>
@@ -67,7 +67,7 @@ const ServiceArea3 = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="700" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-icon">
                 <i className="fi flaticon2-camioneta"></i>

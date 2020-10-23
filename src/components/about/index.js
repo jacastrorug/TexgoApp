@@ -25,8 +25,6 @@ const AboutSection = () => {
               services for Owner OP. With decades of experience we are certain to find the right 
               solution for you!
               </p>
-              <span>Long established fact that a reader</span>
-              <span>We making it look like readable English.</span>
             </div>
             <div className="signature-section"></div>
           </div>

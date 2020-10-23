@@ -147,3 +147,7 @@
 .flaticon2-copo-de-nieve-1:before {
   content: "\f10f";
 }
+
+.flaticon2-buscar:before { content: "\f110"; }
+.flaticon2-investigar:before { content: "\f111"; }
+.flaticon2-goal:before { content: "\f112"; }

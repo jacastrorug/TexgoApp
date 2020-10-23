@@ -6,7 +6,7 @@ const BannerLogo = () => {
   return (
     <div className="bannerlogo-area bannerlogo-features-area">
       <div className="container">
-        <div className="row">
+        <div className="row" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
           <div className="col-lg-4 col-md-6"></div>
           <div className="col-lg-4 col-md-6">
             <div className="bannerlogo-features-item">

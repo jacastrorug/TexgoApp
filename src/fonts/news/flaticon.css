@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 22/09/2020 07:00
+  	Creation date: 23/10/2020 03:45
   	*/
 
 @font-face {
@@ -46,3 +46,6 @@ margin-left: 20px;
 .flaticon-temperaturas-bajas:before { content: "\f10d"; }
 .flaticon-copo-de-nieve:before { content: "\f10e"; }
 .flaticon-copo-de-nieve-1:before { content: "\f10f"; }
+.flaticon-buscar:before { content: "\f110"; }
+.flaticon-investigar:before { content: "\f111"; }
+.flaticon-goal:before { content: "\f112"; }

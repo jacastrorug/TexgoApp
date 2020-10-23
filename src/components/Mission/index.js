@@ -17,7 +17,7 @@ const Mission = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="200" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-single">
                 <div className="service-img">
@@ -35,7 +35,7 @@ const Mission = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-single">
                 <div className="service-img">
@@ -53,7 +53,7 @@ const Mission = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="400" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-single">
                 <div className="service-img">
