@@ -1,0 +1,87 @@
+.bannerlogo-area {
+  position: relative;
+  padding: 70px 0 70px;
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
+.fetures-img {
+  position: absolute;
+  left: 8%;
+  top: 14%;
+}
+
+.fetures-img img {
+  max-width: 100%;
+}
+
+.bannerlogo-features-icon {
+  margin-bottom: 18px;
+}
+
+.feature-icon3 {
+  margin-bottom: 10px;
+}
+
+.bannerlogo-section-title2 h2:before {
+  left: 0;
+}
+
+.bannerlogo-section-title2 h2 {
+  margin-bottom: 30px;
+}
+
+.bannerlogo-features-text p {
+  padding-top: 10px;
+}
+.bannerlogo-features-text h3 {
+  font-size: 25px;
+}
+.bannerlogo-features-item .fi {
+  color: #e53935;
+}
+.bannerlogo-features-icon2 {
+  transform: rotate(45deg);
+  display: inline-block;
+}
+.bannerlogo-feature-wrap {
+  margin-bottom: 35px;
+}
+.bannerlogo-features-area {
+  position: relative;
+}
+.bannerlogo-features-area:before {
+  content: "";
+  position: absolute;
+  left: 22%;
+  top: 0%;
+  width: 53%;
+  height: 100%;
+  background: url("../../images/banner-logo/2.png") no-repeat center center /
+    cover;
+  z-index: -2;
+}
+.bannerlogo-features-item-2 {
+  text-align: right;
+}
+.bannerlogo-features-area .bannerlogo-features-icon,
+.bannerlogo-features-area .bannerlogo-features-icon2,
+.bannerlogo-features-area .feature-icon3 {
+  width: 90px;
+  height: 90px;
+  background: #e53935;
+  border-radius: 50%;
+  line-height: 75px;
+  text-align: center;
+  color: #fff;
+  border: 6px solid #fad4d4;
+}
+.bannerlogo-features-area .bannerlogo-features-item .fi {
+  color: #fff;
+}
+.bannerlogo-features-area .feature-icon3 {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.bannerlogo-features-area .bannerlogo-feature-img {
+  text-align: center;
+}
