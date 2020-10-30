@@ -3,7 +3,7 @@ import "./style.css";
 
 const ServiceArea3 = () => {
   return (
-    <div className="service-style-3">
+    <div id="service-home-section" className="service-style-3">
       <div className="container">
         <div className="col-l2">
           <div className="wpo-section-title text-center">
@@ -70,7 +70,7 @@ const ServiceArea3 = () => {
           <div className="col-lg-4 col-md-6 col-sm-12" data-sal="slide-up" data-sal-delay="700" data-sal-easing="ease">
             <div className="wpo-service-item">
               <div className="wpo-service-icon">
-                <i className="fi flaticon2-camioneta"></i>
+                <i className="fi flaticon2-laptop"></i>
               </div>
               <div className="service-text">
                 <h3>Dispatch Services</h3>

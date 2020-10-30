@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class ContactForm extends Component {
   state = {
     name: "",
@@ -54,14 +60,25 @@ class ContactForm extends Component {
       error.adress === "" &&
       error.notes === ""
     ) {
-      this.setState({
-        name: "",
-        email: "",
-        number: "",
-        adress: "",
-        notes: "",
-        error: {},
-      });
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...this.state })
+      })
+        .then(() => {
+          this.setState({
+            name: "",
+            email: "",
+            number: "",
+            adress: "",
+            notes: "",
+            error: {},
+          });
+        })
+        .catch(error => alert(error));
+
+
     }
   };
 
@@ -69,7 +86,7 @@ class ContactForm extends Component {
     const { name, email, number, adress, notes, error } = this.state;
 
     return (
-      <form onSubmit={this.subimtHandler}>
+      <form onSubmit={this.subimtHandler} data-netlify="true" netlify-honeypot="bot-field" name="contact">
         <div className="contact-form form-style row">
           <div className="col-12 col-lg-6">
             <input
@@ -95,7 +112,7 @@ class ContactForm extends Component {
           </div>
           <div className="col col-lg-6">
             <input
-              type="text"
+              type="phone"
               placeholder="Phone"
               onChange={this.changeHandler}
               value={number}
@@ -106,7 +123,7 @@ class ContactForm extends Component {
           </div>
           <div className="col-12  col-lg-6">
             <input
-              type="adress"
+              type="address"
               placeholder="Your adress"
               onChange={this.changeHandler}
               value={adress}
@@ -125,6 +142,7 @@ class ContactForm extends Component {
             ></textarea>
             <p>{error.notes ? error.notes : ""}</p>
           </div>
+          <input type="hidden" name="form-name" value="contact" />
           <div className="col-12">
             <button type="submit" className="theme-btn">
               Send Message

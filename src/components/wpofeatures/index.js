@@ -26,7 +26,7 @@ const WpoFeatures = () => {
               <div className="col-lg-12 col-md-12 col-sm-12">
                 <div className="wpo-feature-wrap">
                   <div className="feature-icon3">
-                    <i className="fi flaticon-truck"></i>
+                    <i className="fi flaticon2-money"></i>
                   </div>
                   <div className="wpo-features-text">
                     <h3>$100,000 bond</h3>

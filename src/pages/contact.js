@@ -9,7 +9,7 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <Breadcumb bdtitle={"Conact Us"} bdsub={"Contact"} />
+      <Breadcumb bdtitle={"Contact Us"} bdsub={"Contact"} />
       <Contactpage />
     </Layout>
   );

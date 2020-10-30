@@ -2,19 +2,26 @@ import React, { Component } from "react";
 
 import "./style.css";
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class CuoteForm extends Component {
+  
   state = {
     name: "",
     email: "",
     number: "",
-    adress: "",
+    address: "",
     notes: "",
     title: "",
     company: "",
     origin: "",
     destination: "",
-    equipment: "",
-    size: "",
+    equipment: "Reefer truckload",
+    size: "48 feet",
     error: {},
   };
 
@@ -31,7 +38,7 @@ class CuoteForm extends Component {
   subimtHandler = (e) => {
     e.preventDefault();
 
-    const { name, email, number, adress, notes, error } = this.state;
+    const { name, email, company, title, number, address, origin, destination, equipment, size, notes, error } = this.state;
 
     if (name === "") {
       error.name = "Please enter your name";
@@ -39,11 +46,29 @@ class CuoteForm extends Component {
     if (email === "") {
       error.email = "Please enter your email";
     }
+    if (company === ""){
+      error.company = "Plase enter your company name"
+    }
+    if(title === ""){
+      error.title = "Please enter the title of quote"
+    }
     if (number === "") {
       error.number = "Please enter your number";
     }
-    if (adress === "") {
-      error.adress = "Please enter your adress";
+    if (address === "") {
+      error.address = "Please enter your address";
+    }
+    if(origin === ""){
+      error.origin = "Plase enter the origin of quote";
+    }
+    if(destination === ""){
+      error.destination = "Plase enter the destination of quote";
+    }
+    if(equipment === ""){
+      error.equipment = "Please select an equipment";
+    }
+    if(size === ""){
+      error.size = "Plase select an size";
     }
     if (notes === "") {
       error.notes = "Please enter your note";
@@ -57,19 +82,35 @@ class CuoteForm extends Component {
     if (
       error.name === "" &&
       error.email === "" &&
-      error.email === "" &&
+      error.company === "" &&
+      error.title === "" &&
       error.number === "" &&
-      error.adress === "" &&
+      error.address === "" &&
+      error.origin === "" &&
+      error.destination === "" &&
       error.notes === ""
     ) {
-      this.setState({
-        name: "",
-        email: "",
-        number: "",
-        adress: "",
-        notes: "",
-        error: {},
-      });
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "quote", ...this.state })
+      })
+        .then(() => {
+          this.setState({
+            name: "",
+            email: "",
+            company: "",
+            title: "",
+            number: "",
+            address: "",
+            origin: "",
+            destination: "",
+            notes: "",
+            error: {},
+          });
+        })
+        .catch(error => alert(error));
     }
   };
 
@@ -78,7 +119,7 @@ class CuoteForm extends Component {
       name,
       email,
       number,
-      adress,
+      address,
       notes,
       title,
       company,
@@ -96,7 +137,7 @@ class CuoteForm extends Component {
             <div className="col-lg-12 col-md-12">
               <div className="contact-area contact-area-2 contact-area-3">
                 <h2>QUOTE FORM</h2>
-                <form onSubmit={this.subimtHandler}>
+                <form onSubmit={this.subimtHandler} data-netlify="true" netlify-honeypot="bot-field" name="quote">
                   <div className="contact-form form-style row">
                     <div className="col-12 col-lg-6">
                       <input
@@ -129,7 +170,7 @@ class CuoteForm extends Component {
                         id="company"
                         name="company"
                       />
-                      <p>{error.number ? error.number : ""}</p>
+                      <p>{error.company ? error.company : ""}</p>
                     </div>
                     <div className="col-12  col-lg-6">
                       <input
@@ -140,18 +181,18 @@ class CuoteForm extends Component {
                         id="title"
                         name="title"
                       />
-                      <p>{error.adress ? error.adress : ""}</p>
+                      <p>{error.title ? error.title : ""}</p>
                     </div>
                     <div className="col-12  col-lg-6">
                       <input
-                        type="adress"
-                        placeholder="Your adress"
+                        type="address"
+                        placeholder="Your address"
                         onChange={this.changeHandler}
-                        value={adress}
-                        id="adress"
-                        name="adress"
+                        value={address}
+                        id="address"
+                        name="address"
                       />
-                      <p>{error.adress ? error.adress : ""}</p>
+                      <p>{error.address ? error.address : ""}</p>
                     </div>
                     <div className="col12 col-lg-6">
                       <input
@@ -174,7 +215,7 @@ class CuoteForm extends Component {
                         id="origin"
                         name="origin"
                       />
-                      <p>{error.number ? error.number : ""}</p>
+                      <p>{error.origin ? error.origin : ""}</p>
                     </div>
 
                     <div className="col col-lg-6">
@@ -186,7 +227,7 @@ class CuoteForm extends Component {
                         id="destination"
                         name="destination"
                       />
-                      <p>{error.number ? error.number : ""}</p>
+                      <p>{error.destination ? error.destination : ""}</p>
                     </div>
 
                     <div className="col-12 col-lg-6">
@@ -198,10 +239,10 @@ class CuoteForm extends Component {
                         name="equipment"
                         className="form-control"
                       >
-                        <option value={""}>Dry Van / Truckload</option>
-                        <option value={"a"}>Flatbed / Stepdeck</option>
+                        <option value={"Reefer truckload"}>Reefer truckload</option>
+                        <option value={"LTL"}>LTL</option>
                       </select>
-                      <p>{error.number ? error.number : ""}</p>
+                      <p>{error.equipment ? error.equipment : ""}</p>
                     </div>
 
                     <div className="col-12 col-lg-6">
@@ -213,10 +254,10 @@ class CuoteForm extends Component {
                         name="size"
                         className="form-control"
                       >
-                        <option value={""}>48 feet</option>
-                        <option value={"a"}>45 feet</option>
+                        <option value={"48 feet"}>48 feet</option>
+                        <option value={"53 feet"}>53 feet</option>
                       </select>
-                      <p>{error.number ? error.number : ""}</p>
+                      <p>{error.size ? error.size : ""}</p>
                     </div>
 
                     <div className="col-12 col-sm-12">
@@ -229,6 +270,9 @@ class CuoteForm extends Component {
                       ></textarea>
                       <p>{error.notes ? error.notes : ""}</p>
                     </div>
+
+                    <input type="hidden" name="form-name" value="quote" />
+
                     <div className="col-12">
                       <button type="submit" className="theme-btn pull-right">
                         Get Quote

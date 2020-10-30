@@ -2,11 +2,11 @@ import React from 'react';
 
 import './style.css'
 
-const CounterSection = (props) => {
+const CarriersSection = (props) => {
 
     return(
         <div className={`wpo-counter-area ${props.subclass??""}`}>
-            <div className="container">
+            <div className="container padding-counter">
                 <div className="row">
                     <div className="col-lg-7 col-md-6 col-sm-12">
                         <div className="wpo-counter-content">
@@ -18,36 +18,24 @@ const CounterSection = (props) => {
                             <div className="btns">
                             <p>Or click here</p>
                                 <div className="btn-style btn-style-3">
-                                    <a className="link-carrier" to="https://www.mycarrierpackets.com/">Click here</a>
+                                    <a className="link-carrier" href="https://www.mycarrierpackets.com/0662ebd9-25df-416c-900d-fb4a68a8d71a/Carrier/Intellivite">Click here</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-5 col-md-6 col-sm-12">
                         <div className="wpo-counter-grids">
-                            <div className="grid">
+                            <div className="grid counter-carrier">
                                 <div>
-                                    <h2><span>4,012</span></h2>
+                                    <h2><span>17,000+</span></h2>
                                 </div>
-                                <p>Delivered Packages</p>
+                                <p>Number of Carriers</p>
                             </div>
-                            <div className="grid">
+                            <div className="grid counter-carrier">
                                 <div>
-                                    <h2><span>605</span></h2>
+                                    <h2><span>100,000+</span></h2>
                                 </div>
-                                <p>Countries Covered</p>
-                            </div>
-                            <div className="grid">
-                                <div>
-                                    <h2><span>920</span></h2>
-                                </div>
-                                <p>Satisfied Clients</p>
-                            </div>
-                            <div className="grid">
-                                <div>
-                                    <h2><span>3,592</span></h2>
-                                </div>
-                                <p>Tons of Goods</p>
+                                <p>Loads Shipped</p>
                             </div>
                         </div>
                     </div>
@@ -58,4 +46,4 @@ const CounterSection = (props) => {
         
 }
 
-export default CounterSection;
+export default CarriersSection;

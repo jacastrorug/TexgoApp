@@ -13,6 +13,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
 
 const Layout = ({ children }) => {
+
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

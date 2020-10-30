@@ -12,6 +12,7 @@ const Header = () => {
     e.preventDefault();
   };
 
+
   return (
     <header>
       <div className="header-style-1">
@@ -32,18 +33,7 @@ const Header = () => {
                       <Link to="/">Home</Link>
                     </li>
                     <li>
-                      <Link to="/about">About Us</Link>
-                    </li>
-                    <li>
-                      <Link to="/our-services">Service</Link>
-                      <ul className="submenu">
-                        <li>
-                          <Link to="/our-services">Our Services</Link>
-                        </li>
-                        <li>
-                          <Link to="/road-service">Road Freight</Link>
-                        </li>
-                      </ul>
+                      <Link to="/#service-home-section">Service</Link>
                     </li>
                     <li>
                       <Link to="/carriers">Carriers</Link>
@@ -52,30 +42,14 @@ const Header = () => {
                       <Link to="/customers">Customers</Link>
                     </li>
                     <li>
+                      <Link to="/quote-road-service">Quote</Link>
+                    </li>
+                    <li>
                       <Link to="/contact">Contact</Link>
                     </li>
                   </ul>
                 </nav>
               </div>
-            </div>
-            <div className="col-lg-1 col-md-1 col-sm-1 col-2 search">
-              <ul>
-                <li>
-                  <Link to="/">
-                    <i className="fa fa-search"></i>
-                  </Link>
-                  <ul>
-                    <li>
-                      <form onSubmit={SubmitHandler}>
-                        <input type="text" placeholder="search here.." />
-                        <button type="btn">
-                          <i className="fa fa-search"></i>
-                        </button>
-                      </form>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
             </div>
             <div className="col-md-1 col-sm-1 col-2">
               <MobileMenu />

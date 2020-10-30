@@ -19,17 +19,13 @@ const FooterSection = () => {
               <div className="wpo-footer-logo">
                 <img src={logo} alt="" className="logo-footer" />
               </div>
-              <p>
-                There are many variations of Lorem passages of Lorem Ipsum
-                available, but the majority
-              </p>
-              <p>By injected humour, or randomised words</p>
+              <p>Powered by Freight Tec</p>
               <div className="social">
                 <ul className="d-flex">
                   <li>
-                    <Link to="/">
+                    <a href="https://www.linkedin.com/">
                       <i className="fa fa-linkedin" aria-hidden="true"></i>
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -39,7 +35,7 @@ const FooterSection = () => {
                 <h3>Quick Link</h3>
                 <ul>
                   <li>
-                    <Link to="/">About Us</Link>
+                    <Link to="/">Home</Link>
                   </li>
                   <li>
                     <Link to="/">Service</Link>
@@ -47,33 +43,23 @@ const FooterSection = () => {
                   <li>
                     <Link to="/">Location</Link>
                   </li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 col-sm-6 footer-b">
+            <div className="footer-link">
+                <h3>Quick Link</h3>
+                <ul>
                   <li>
                     <Link to="/">Testimonial</Link>
                   </li>
                   <li>
-                    <Link to="/">Contact</Link>
+                    <Link to="/contact">Contact</Link>
                   </li>
                   <li>
                     <Link to="/">Blog</Link>
                   </li>
                 </ul>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 footer-b">
-              <div className="Recent-News-area">
-                <h3>Recent News</h3>
-                <div className="resent-sub">
-                  <p>There are many variations of passages of Lorem</p>
-                  <span>
-                    <i className="fa fa-clock-o" aria-hidden="true"></i> Octobor
-                    10, 2018
-                  </span>
-                </div>
-                <p>There are many variations of passages of Lorem</p>
-                <span>
-                  <i className="fa fa-clock-o" aria-hidden="true"></i> Octobor
-                  10, 2018
-                </span>
               </div>
             </div>
             </div>
