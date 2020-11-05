@@ -10,7 +10,7 @@ const CustomersSection = (props) => {
                 <div className="row">
                     <div className="col-lg-7 col-md-6 col-sm-12">
                         <div className="wpo-counter-content">
-                            <h2>Want your feright in good hands?</h2>
+                            <h2>Want your freight in good hands?</h2>
                             <p>Send an email to ghunt@texgotrans.com and include the following:</p>
                             <span>Company Name</span>
                             <span>Lane</span>
