@@ -1,24 +1,21 @@
 import React, { Component } from "react";
+import { toast } from "react-toastify";
 
-const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
+import { sendContactMail } from "../../utils/mails";
 
 class ContactForm extends Component {
   state = {
     name: "",
     email: "",
-    number: "",
-    adress: "",
-    notes: "",
+    phone: "",
+    address: "",
+    message: "",
     error: {},
   };
 
   changeHandler = (e) => {
     const error = this.state.error;
-    error[e.target.name] = "";
+    delete error[e.target.name];
 
     this.setState({
       [e.target.name]: e.target.value,
@@ -29,64 +26,52 @@ class ContactForm extends Component {
   subimtHandler = (e) => {
     e.preventDefault();
 
-    const { name, email, number, adress, notes, error } = this.state;
+    const { name, email, phone, address, message, error } = this.state;
 
-    if (name === "") {
-      error.name = "Please enter your name";
-    }
-    if (email === "") {
-      error.email = "Please enter your email";
-    }
-    if (number === "") {
-      error.number = "Please enter your number";
-    }
-    if (adress === "") {
-      error.adress = "Please enter your adress";
-    }
-    if (notes === "") {
-      error.notes = "Please enter your note";
-    }
+    if (name === "") error.name = "Please enter your name";
 
-    if (error) {
+    if (email === "") error.email = "Please enter your email";
+
+    if (phone === "") error.phone = "Please enter your phone number";
+
+    if (address === "") error.address = "Please enter your address";
+
+    if (message === "") error.message = "Please enter your note";
+
+    if (Object.keys(error).length > 0) {
       this.setState({
         error,
       });
-    }
-    if (
-      error.name === "" &&
-      error.email === "" &&
-      error.email === "" &&
-      error.number === "" &&
-      error.adress === "" &&
-      error.notes === ""
-    ) {
+      toast("Please fill all the inputs", { type: "error" });
+    } else {
+      const mailRequest = sendContactMail(this.state);
 
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...this.state })
-      })
-        .then(() => {
+      mailRequest
+        .then((response) => response.json())
+        .then((response) => {
+          toast(`📦 Thanks for your message, we will contact to you as soon as possible`, { type: "dark" });
+          
+          //Clean form
           this.setState({
             name: "",
             email: "",
-            number: "",
-            adress: "",
-            notes: "",
+            phone: "",
+            address: "",
+            message: "",
             error: {},
           });
         })
-        .catch(error => alert(error));
-
-
+        .catch((error) => {
+          toast("We have some problems, please try again in a few moment", { type: "error" });
+        });
     }
   };
 
   render() {
-    const { name, email, number, adress, notes, error } = this.state;
+    const { name, email, phone, address, message, error } = this.state;
 
     return (
-      <form onSubmit={this.subimtHandler} data-netlify="true" netlify-honeypot="bot-field" name="contact">
+      <form onSubmit={this.subimtHandler}>
         <div className="contact-form form-style row">
           <div className="col-12 col-lg-6">
             <input
@@ -115,32 +100,33 @@ class ContactForm extends Component {
               type="phone"
               placeholder="Phone"
               onChange={this.changeHandler}
-              value={number}
-              id="number"
-              name="number"
+              value={phone}
+              id="phone"
+              name="phone"
+              autoComplete="tel"
             />
-            <p>{error.number ? error.number : ""}</p>
+            <p>{error.phone ? error.phone : ""}</p>
           </div>
           <div className="col-12  col-lg-6">
             <input
               type="address"
-              placeholder="Your adress"
+              placeholder="Your address"
               onChange={this.changeHandler}
-              value={adress}
-              id="adress"
-              name="adress"
+              value={address}
+              id="address"
+              name="address"
             />
-            <p>{error.adress ? error.adress : ""}</p>
+            <p>{error.address ? error.address : ""}</p>
           </div>
           <div className="col-12 col-sm-12">
             <textarea
               className="contact-textarea"
-              value={notes}
+              value={message}
               onChange={this.changeHandler}
               placeholder="Message"
-              name="notes"
+              name="message"
             ></textarea>
-            <p>{error.notes ? error.notes : ""}</p>
+            <p>{error.message ? error.message : ""}</p>
           </div>
           <input type="hidden" name="form-name" value="contact" />
           <div className="col-12">

@@ -19,7 +19,7 @@ const Contactpage = () => {
               </div>
               <div className="adress">
                 <h3>Address</h3>
-                <span>Pobox 1314 Spoing, Texas</span>
+                <span>Pobox 1314 Spring, Texas</span>
               </div>
               <div className="phone">
                 <h3>Phone</h3>

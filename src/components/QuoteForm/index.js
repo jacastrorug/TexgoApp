@@ -1,19 +1,20 @@
 import React, { Component } from "react";
+import { toast } from "react-toastify";
 
+import { sendQuoteMail } from "../../utils/mails";
 import "./style.css";
 
 const encode = (data) => {
   return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
-}
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
-class CuoteForm extends Component {
-  
+class QuoteForm extends Component {
   state = {
     name: "",
     email: "",
-    number: "",
+    phone: "",
     address: "",
     notes: "",
     title: "",
@@ -27,7 +28,7 @@ class CuoteForm extends Component {
 
   changeHandler = (e) => {
     const error = this.state.error;
-    error[e.target.name] = "";
+    delete error[e.target.name];
 
     this.setState({
       [e.target.name]: e.target.value,
@@ -38,79 +39,80 @@ class CuoteForm extends Component {
   subimtHandler = (e) => {
     e.preventDefault();
 
-    const { name, email, company, title, number, address, origin, destination, equipment, size, notes, error } = this.state;
+    const {
+      name,
+      email,
+      company,
+      title,
+      phone,
+      address,
+      origin,
+      destination,
+      equipment,
+      size,
+      notes,
+      error,
+    } = this.state;
 
-    if (name === "") {
-      error.name = "Please enter your name";
-    }
-    if (email === "") {
-      error.email = "Please enter your email";
-    }
-    if (company === ""){
-      error.company = "Plase enter your company name"
-    }
-    if(title === ""){
-      error.title = "Please enter the title of quote"
-    }
-    if (number === "") {
-      error.number = "Please enter your number";
-    }
-    if (address === "") {
-      error.address = "Please enter your address";
-    }
-    if(origin === ""){
-      error.origin = "Plase enter the origin of quote";
-    }
-    if(destination === ""){
+    if (name === "") error.name = "Please enter your name";
+
+    if (email === "") error.email = "Please enter your email";
+
+    if (company === "") error.company = "Plase enter your company name";
+
+    if (title === "") error.title = "Please enter the title of quote";
+
+    if (phone === "") error.phone = "Please enter your phone number";
+
+    if (address === "") error.address = "Please enter your address";
+
+    if (origin === "") error.origin = "Plase enter the origin of quote";
+
+    if (destination === "")
       error.destination = "Plase enter the destination of quote";
-    }
-    if(equipment === ""){
-      error.equipment = "Please select an equipment";
-    }
-    if(size === ""){
-      error.size = "Plase select an size";
-    }
-    if (notes === "") {
-      error.notes = "Please enter your note";
-    }
 
-    if (error) {
+    if (equipment === "") error.equipment = "Please select an equipment";
+
+    if (size === "") error.size = "Plase select an size";
+
+    if (notes === "") error.notes = "Please enter your note";
+
+    if (Object.keys(error).length > 0) {
       this.setState({
         error,
       });
-    }
-    if (
-      error.name === "" &&
-      error.email === "" &&
-      error.company === "" &&
-      error.title === "" &&
-      error.number === "" &&
-      error.address === "" &&
-      error.origin === "" &&
-      error.destination === "" &&
-      error.notes === ""
-    ) {
+      toast("Please fill all the inputs", { type: "error" });
+    } else {
+      const mailRequest = sendQuoteMail(this.state);
 
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "quote", ...this.state })
-      })
-        .then(() => {
+      mailRequest
+        .then((response) => response.json())
+        .then((response) => {
+          toast(
+            `📦 Thanks for your message, we will contact to you as soon as possible`,
+            { type: "dark" }
+          );
+
           this.setState({
             name: "",
             email: "",
-            company: "",
-            title: "",
-            number: "",
+            phone: "",
             address: "",
+            notes: "",
+            title: "",
+            company: "",
             origin: "",
             destination: "",
-            notes: "",
+            equipment: "Reefer truckload",
+            size: "48 feet",
             error: {},
           });
         })
-        .catch(error => alert(error));
+        .catch((error) => {
+          toast("We have some problems, please try again in a few moment", {
+            type: "error",
+          });
+        });
     }
   };
 
@@ -118,7 +120,7 @@ class CuoteForm extends Component {
     const {
       name,
       email,
-      number,
+      phone,
       address,
       notes,
       title,
@@ -137,7 +139,12 @@ class CuoteForm extends Component {
             <div className="col-lg-12 col-md-12">
               <div className="contact-area contact-area-2 contact-area-3">
                 <h2>QUOTE FORM</h2>
-                <form onSubmit={this.subimtHandler} data-netlify="true" netlify-honeypot="bot-field" name="quote">
+                <form
+                  onSubmit={this.subimtHandler}
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  name="quote"
+                >
                   <div className="contact-form form-style row">
                     <div className="col-12 col-lg-6">
                       <input
@@ -199,11 +206,11 @@ class CuoteForm extends Component {
                         type="text"
                         placeholder="Phone"
                         onChange={this.changeHandler}
-                        value={number}
-                        id="number"
-                        name="number"
+                        value={phone}
+                        id="phone"
+                        name="phone"
                       />
-                      <p>{error.number ? error.number : ""}</p>
+                      <p>{error.phone ? error.phone : ""}</p>
                     </div>
 
                     <div className="col-12 col-lg-6">
@@ -239,7 +246,9 @@ class CuoteForm extends Component {
                         name="equipment"
                         className="form-control"
                       >
-                        <option value={"Reefer truckload"}>Reefer truckload</option>
+                        <option value={"Reefer truckload"}>
+                          Reefer truckload
+                        </option>
                         <option value={"LTL"}>LTL</option>
                       </select>
                       <p>{error.equipment ? error.equipment : ""}</p>
@@ -289,4 +298,4 @@ class CuoteForm extends Component {
   }
 }
 
-export default CuoteForm;
+export default QuoteForm;
