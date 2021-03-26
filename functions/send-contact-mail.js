@@ -8,7 +8,7 @@ const mg = mailgun({
 const mailData = {
   from:
     "Texgo Transport Contact <postmaster@sandbox5d61013d7fcd40d1a684457ccdd0a29b.mailgun.org>",
-  to: "juliancastroruge@gmail.com",
+  to: "ghunt@texgotrans.com",
   subject: "New contact message from Texgo Transport",
   template: "variable-2020-12-22.071132",
   //   "h:X-Mailgun-Variables": JSON.stringify({
