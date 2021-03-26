@@ -32,13 +32,13 @@ const FooterSection = () => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 footer-t">
               <div className="footer-link">
-                <h3>Quick Link</h3>
+                <h3>Quick Links</h3>
                 <ul>
                   <li>
                     <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/">Service</Link>
+                    <Link to="/">Services</Link>
                   </li>
                   <li>
                     <Link to="/">Location</Link>
@@ -48,7 +48,7 @@ const FooterSection = () => {
             </div>
             <div className="col-lg-4 col-md-6 col-sm-6 footer-b">
             <div className="footer-link">
-                <h3>Quick Link</h3>
+                <h3>Quick Links</h3>
                 <ul>
                   <li>
                     <Link to="/">Testimonial</Link>

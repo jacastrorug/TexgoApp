@@ -41,7 +41,7 @@ const ServiceArea3 = () => {
               </div>
               <div className="service-text">
                 <h3>LTL</h3>
-                <p>From 1 box to a few Pallets, We have a solution</p>
+                <p>From 1 box to a few pallets, We have a solution</p>
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@ const ServiceArea3 = () => {
               </div>
               <div className="service-text">
                 <h3>Expedite</h3>
-                <p>If needs to move quicly we have options</p>
+                <p>If needs to move quickly we have options</p>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ const ServiceArea3 = () => {
               </div>
               <div className="service-text">
                 <h3>Flatbed</h3>
-                <p>From coils to building materks we can have it</p>
+                <p>From coils to building materials we can have it</p>
               </div>
             </div>
           </div>

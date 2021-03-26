@@ -50,7 +50,7 @@ const WpoFeatures = () => {
                     <i className="fi flaticon2-goal"></i>
                   </div>
                   <div className="wpo-features-text">
-                    <h3>Single Point Contact</h3>
+                    <h3>Single Point Contacts</h3>
                   </div>
                 </div>
               </div>

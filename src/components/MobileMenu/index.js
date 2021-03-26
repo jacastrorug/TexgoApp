@@ -20,7 +20,7 @@ const menus = [
   },
   {
     id: 3,
-    title: "Service",
+    title: "Services",
     submenu: [
       {
         id: 31,
